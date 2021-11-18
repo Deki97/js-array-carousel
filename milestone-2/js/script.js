@@ -38,7 +38,7 @@ for(let i = 0; i < items.length; i++) {
 
     const singleImageDiv = `
     <div class="single-image active">
-            <img src="${thisPath}" alt="Img 1">
+            <img src="${thisPath}" alt="">
 
             <div class="single-image-description">
                 <h3>${thisTitle}</h3>
@@ -48,4 +48,18 @@ for(let i = 0; i < items.length; i++) {
     `;
 
     mainImagesContainer.innerHTML += singleImageDiv;
+}
+
+
+const thumbsContainer = document.querySelector('.thumbs');
+for(let i = 0; i < items.length; i++) {
+    const thisThumb = items[i];
+
+    const singleThumbImage = `
+    <div class="single-thumb active">
+        <img src="${thisThumb}" alt=""> 
+    </div>
+    `;
+
+    thumbsContainer.innerHTML += singleThumbImage;
 }
